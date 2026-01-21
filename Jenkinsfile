@@ -28,7 +28,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running maven build...'
-                dir('maven') {
+                dir('Project_java') {
                     sh 'mvn clean package'
                 }
             }
@@ -36,7 +36,7 @@ pipeline {
 
         stage('Unit Tests') {
             steps {
-                dir('maven') {
+                dir('Project_java') {
                     sh 'mvn test'
                 }
             }
