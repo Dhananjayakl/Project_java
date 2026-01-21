@@ -28,17 +28,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running maven build...'
-                dir('Project_java') {
                     sh 'mvn clean package'
-                }
             }
         }
 
         stage('Unit Tests') {
             steps {
-                dir('Project_java') {
                     sh 'mvn test'
-                }
             }
             post {
                 always {
