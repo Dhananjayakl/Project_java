@@ -21,7 +21,7 @@ pipeline {
             steps {
                 git branch: "${BRANCH}",
                     url: "${GIT_REPO}",
-                    credentialsId: '246e4390-6513-40d3-9379-a13be88e6658'
+                    credentialsId: 'ssh-wsl'
             }
         }
 
